@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv5 Inference Result</title>
+</head>
+<body>
+    <h1>Original Image</h1>
+    <img src="data:image/jpeg;base64,{{ image }}" alt="Original Image">
+
+    <h1>Inferred Image</h1>
+    <img src="data:image/jpeg;base64,{{ image }}" alt="Inferred Image">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Define grid columns */
+            gap: 10px; /* Define gap between grid items */
+        }
+        .image {
+            max-width: 100%; /* Set maximum width to maintain aspect ratio */
+            height: auto; /* Ensure aspect ratio is maintained */
+        }
+        
+            body {
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            }
+            .tagg{
+                color: white;
+            }
+        
+    </style>
+</head>
+<body >
+    <div class="tagg">
+    <h1>Uploaded Image</h1></div>
+    <div class="container">
+        <img class="image" src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+    </div>
+</body>
+</html>
